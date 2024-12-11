@@ -12,7 +12,21 @@ interface MetricProps {
   isAuthor?: boolean;
 }
 
-const Metric = ({
+/** ***********  ✨ Codeium Command ⭐  *************/
+/**
+ * A small metric component to display a value and a short description.
+ *
+ * @param {string} imgUrl - The image URL for the metric icon.
+ * @param {string} alt - The alt text for the metric icon.
+ * @param {string|number} value - The value to display for the metric.
+ * @param {string} title - A short description of the metric.
+ * @param {string} [href] - An optional href link to wrap the metric content in a Link component.
+ * @param {string} [textStyles] - Optional tailwindcss styles for the text.
+ * @param {boolean} [isAuthor] - If true, hide the title on small screens.
+ *
+ * @returns {ReactElement} A small metric component.
+ */
+/** ****  9cf90ed6-2ff6-4a1c-aac2-955bdcd8ec1c  *******/const Metric = ({
   imgUrl,
   alt,
   value,

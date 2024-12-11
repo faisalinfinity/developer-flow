@@ -11,14 +11,14 @@ import { SearchParamsProps } from "@/types";
 import Link from "next/link";
 
 import type { Metadata } from 'next';
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 
 export const metadata: Metadata = {
   title: 'Home | Dev Overflow',
 }
 
 export default async function Home({ searchParams }: SearchParamsProps) {
-  const { userId } = auth();
+  const { userId } =await auth();
 
   let result;
 
