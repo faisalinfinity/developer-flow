@@ -4,7 +4,10 @@
 @tailwind utilities;
 
 @import url("../styles/theme.css");
-
+ 
+:root {
+  --radius: 8px;
+}
 body {
   font-family: "Inter", sans-serif;
 }
