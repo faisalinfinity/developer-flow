@@ -61,14 +61,16 @@ const Answer = ({ question, questionId, authorId }: Props) => {
     if(!authorId) return;
 
     setSetIsSubmittingAI(true);
-
+    // ${process.env.NEXT_PUBLIC_SERVER_URL}
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/chatgpt`, { 
+      const response = await fetch(`/api/chatgpt`, { 
         method: 'POST',
         body: JSON.stringify({ question })
       })
 
       const aiAnswer = await response.json();
+
+      console.log(aiAnswer)
 
       // Convert plain text to HTML format
 
